@@ -11,6 +11,8 @@ public class ControllerClient {
     @Autowired
     ServerClient serverClient;
     @RequestMapping("/xxx")
+    //TODO
+    //如果用实现FallbackFactory类的方法做的话 就可以省去这个注解
     @HystrixCommand(fallbackMethod = "defaultMethod")
     public String demo(){
         return serverClient.test();

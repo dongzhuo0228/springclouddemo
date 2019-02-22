@@ -4,7 +4,7 @@ import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-//@Component//不要忘记添加
+@Component//不要忘记添加
 @Slf4j
 public class DeptClientServiceFallbackFactory implements FallbackFactory<ServerClient> {
     @Override
